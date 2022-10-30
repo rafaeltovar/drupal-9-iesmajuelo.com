@@ -1,0 +1,98 @@
+{#
+/**
+ * PLANTA BAJA PLANO
+ */
+#}
+<script type="text/javascript">
+<!--
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=640,height=480');");
+}
+// -->
+</script>
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer class="node__meta">
+      {{ author_picture }}
+      <div{{ author_attributes.addClass('node__submitted') }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content }}
+  </div>
+  <div>
+  <p align="center">
+<map name="PlantaBaja">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja1.jpg')" shape="rect" coords="11, 13, 62, 103" ALT="Biblioteca">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja2.jpg')"  shape="rect" coords="14, 148, 58, 238" ALT="Laboratorio de qu&iacute;mica">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja3.jpg')"  shape="rect" coords="11, 250, 56, 305" ALT="Aula 25">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja4.jpg')"  shape="rect" coords="10, 409, 57, 468" ALT="Aula 10">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja5.jpg')"  shape="rect" coords="14, 477, 58, 567" ALT="Laboratorio de f&iacute;sica">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja6.jpg')"  shape="rect" coords="9, 608, 59, 635" ALT="Jefatura de estudios">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja7.jpg')"  shape="rect" coords="10, 643, 100, 702" ALT="Sala de profesores">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja8.jpg')"  shape="rect" coords="89, 147, 139, 214" ALT="Dibujo">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja9.jpg')"  shape="rect" coords="88, 218, 138, 238" ALT="Departamento de dibujo">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja10.jpg')" shape="circle" coords="91, 413, 7" ALT="Servidor &Iacute;caro">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja11.jpg')" shape="rect" coords="85, 280, 114, 304" ALT="Conserjer&iacute;a">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja12.jpg')" shape="rect" coords="102, 409, 141, 434" ALT="Secretar&iacute;a">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja13.jpg')" shape="rect" coords="87, 440, 109, 455" ALT="Archivo">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja14.jpg')" shape="rect" coords="117, 440, 139, 467" ALT="Despacho del secretario">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja15.jpg')" shape="circle" coords="134, 479, 7" ALT="Servidor Ulises">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja16.jpg')" shape="rect" coords="110, 487, 138, 494" ALT="Sala de visitas">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja18.jpg')" shape="rect" coords="98, 524, 139, 543" ALT="Despacho del director">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja19.jpg')" shape="rect" coords="97, 547, 140, 568" ALT="Orientaci&oacute;n">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja17.jpg')" shape="rect" coords="110, 500, 139, 516" ALT="Jefe de estudios y vicedirectora">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja20.jpg')" shape="poly" coords="240, 12, 366, 13, 366, 68, 298, 68, 297, 49, 270, 50, 270, 69, 241,
+68" ALT="Tecnolog&iacute;a">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja21.jpg')" shape="circle" coords="282, 62, 7" ALT="Servidor Circe">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja22.jpg')" shape="rect" coords="318, 79, 368, 104" ALT="Departamento de Tecnolog&iacute;a">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja23.jpg')" shape="rect" coords="239, 147, 290, 240" ALT="Aula 41: Tecnolog&iacute;a">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja24.jpg')" shape="rect" coords="240, 249, 292, 308" ALT="Aula 42">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja25.jpg')" shape="rect" coords="316, 164, 368, 240" ALT="Cafeter&iacute;a">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja26.jpg')" shape="poly" coords="319, 251, 317, 396, 371, 396, 367, 396, 407, 396, 407, 318, 367, 319
+, 367, 252" alt="Porche">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja27.jpg')" shape="rect" coords="238, 405, 270, 436" ALT="Departamento de ingl&ecaute;s">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja28.jpg')" shape="rect" coords="238, 442, 289, 500" ALT="Aula 31">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja29.jpg')" shape="rect" coords="239, 510, 291, 567" ALT="Aula 32">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja30.jpg')" shape="rect" coords="288, 654, 368, 703" ALT="Aula Tecnolog&iacute;a">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja31.jpg')" shape="rect" coords="467, 657, 529, 703" ALT="Aula 90">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja32.jpg')" shape="rect" coords="538, 659, 595, 701" ALT="Aula 91">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja33.jpg')" shape="rect" coords="533, 580, 596, 622" ALT="Aula 92">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja34.jpg')" shape="rect" coords="84, 546, 94, 568" ALT="Servidor IES Majuelo">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja35.jpg')" shape="circle" coords="258, 682, 8" ALT="Servidor ">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja36.jpg')" shape="rect" coords="88, 246, 141, 273" ALT="Sala VIP">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja37.jpg')" shape="rect" coords="318, 407, 369, 465" ALT="Aula de m&uacute;sica">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja38.jpg')" shape="circle" coords="49, 393, 8" ALT="Cabina conserjes">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja39.jpg')" shape="poly" coords="239, 701, 240, 643, 280, 644, 280, 702, 267, 702, 268, 670, 249, 669
+, 249, 701" ALT="Taller inform&aacute;tica">
+<area href="javascript:popUp('/sites/default/files/planos/pbaja40.jpg')"  shape="rect" coords="87, 608, 137, 635" ALT="Sala reuniones">
+</map><img border="0" src="/sites/default/files/planos/pbaja.jpg" usemap="#PlantaBaja" width="602" height="712" alt="Planta Baja">  
+  </div>
+
+</article>

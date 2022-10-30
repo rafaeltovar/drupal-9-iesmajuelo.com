@@ -1,0 +1,5 @@
+services:
+  majuelo_custom.twig.CustomTwig:
+    class: Drupal\majuelo_custom\CustomTwig
+    tags:
+      - { name: twig.extension }

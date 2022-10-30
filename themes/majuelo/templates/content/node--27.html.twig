@@ -1,0 +1,112 @@
+{#
+/**
+ * PLANTA ALTA PLANO
+ */
+#}
+
+<script type="text/javascript">
+<!--
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=640,height=480');");
+}
+// -->
+</script>
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer class="node__meta">
+      {{ author_picture }}
+      <div{{ author_attributes.addClass('node__submitted') }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content }}
+  </div>
+  <div>
+  <p align="center">
+<map name="PlantaAlta">
+<area href="javascript:popUp('/sites/default/files/planos/palta1.jpg')" shape="rect" coords="11, 151, 58, 252" ALT="Lab. Ciencias">
+<area href="javascript:popUp('/sites/default/files/planos/palta2.jpg')" shape="rect" coords="9, 263, 59, 325" ALT="Aula 65">
+<area href="javascript:popUp('/sites/default/files/planos/palta3.jpg')" shape="poly" coords="7, 435, 7, 498, 55, 498, 55, 485, 17, 484, 16, 464, 45, 463, 45, 480,
+ 55, 480, 55, 435" ALT="Taller Teseo">
+<area href="javascript:popUp('/sites/default/files/planos/palta4.jpg')" shape="circle" coords="31, 475, 7" ALT="Servidor Teseo">
+<area href="javascript:popUp('/sites/default/files/planos/palta5.jpg')" shape="rect" coords="8, 563, 58, 605" ALT="Aula 51">
+<area href="javascript:popUp('/sites/default/files/planos/palta6.jpg')" shape="polygon" coords="60, 653, 12, 654, 12, 752, 58, 753, 57, 727, 40, 726, 41, 683, 60,
+ 682">
+<area href="javascript:popUp('/sites/default/files/planos/palta7.jpg')" shape="circle" coords="57, 695, 7" ALT="Servidor muralla, ulises(espejo) y ares(espejo)">
+<area href="javascript:popUp('/sites/default/files/planos/palta8.jpg')" shape="circle" coords="56, 711, 7" ALT="Servidor Argos">
+<area href="javascript:popUp('/sites/default/files/planos/palta9.jpg')" shape="rect" coords="91, 153, 145, 217" ALT="Aula 63">
+<area href="javascript:popUp('/sites/default/files/planos/palta11.jpg')" shape="rect" coords="94, 225, 145, 255" ALT="Dpto. Historia">
+<area href="javascript:popUp('/sites/default/files/planos/palta12.jpg')" shape="rect" coords="93, 263, 144, 327" ALT="Aula 60">
+<area href="javascript:popUp('/sites/default/files/planos/palta13.jpg')" shape="polygon" coords="106, 435, 107, 470, 131, 470, 131, 492, 100, 492, 99, 500, 144, 5
+00, 144, 436">
+<area href="javascript:popUp('/sites/default/files/planos/palta14.jpg')" shape="circle" coords="118, 481, 7" ALT="Servidor Midas">
+<area href="javascript:popUp('/sites/default/files/planos/palta5x.jpg')" shape="rect" coords="92, 509, 146, 574" ALT="Aula 5X">
+<area href="javascript:popUp('/sites/default/files/planos/palta17.jpg')" shape="rect" coords="90, 582, 146, 607" ALT="Dpto. Admon. y Finanzas">
+<area href="javascript:popUp('/sites/default/files/planos/palta18.jpg')" shape="poly" coords="92, 691, 93, 753, 106, 754, 107, 728, 130, 727, 129, 753, 142, 754,
+143, 692" ALT="Taller Iris">
+<area href="javascript:popUp('/sites/default/files/planos/palta19.jpg')" shape="circle" coords="118, 740, 9" ALT="Servidor Iris">
+<area href="javascript:popUp('/sites/default/files/planos/palta20.jpg')" shape="rect" coords="41, 351, 324, 412" ALT="Vest�bulo">
+<area href="javascript:popUp('/sites/default/files/planos/palta21.jpg')" shape="rect" coords="156, 618, 196, 647" ALT="Aula reducida 55">
+<area href="javascript:popUp('/sites/default/files/planos/palta22.jpg')" shape="rect" coords="252, 9, 305, 72" ALT="Aula 85">
+<area href="javascript:popUp('/sites/default/files/planos/palta23.jpg')" shape="rect" coords="253, 153, 308, 183" ALT="Aula reducida 86">
+<area href="javascript:popUp('/sites/default/files/planos/palta24.jpg')" shape="rect" coords="252, 190, 306, 254" ALT="Aula 87">
+<area href="javascript:popUp('/sites/default/files/planos/palta25.jpg')" shape="rect" coords="253, 264, 307, 327" ALT="Aula 88">
+<area href="javascript:popUp('/sites/default/files/planos/palta26.jpg')" shape="rect" coords="252, 437, 299, 466" ALT="Dpto. Lengua">
+<area href="javascript:popUp('/sites/default/files/planos/palta27.jpg')" shape="rect" coords="253, 474, 304, 536" ALT="Aula 71">
+<area href="javascript:popUp('/sites/default/files/planos/palta28.jpg')" shape="rect" coords="254, 547, 304, 608" ALT="Aula 72">
+<area href="javascript:popUp('/sites/default/files/planos/palta29.jpg')" shape="rect" coords="250, 690, 303, 756" ALT="Aula 74">
+<area href="javascript:popUp('/sites/default/files/planos/palta30.jpg')" shape="rect" coords="335, 11, 391, 38" ALT="Dpto. Franc&eacute;s">
+<area href="javascript:popUp('/sites/default/files/planos/palta31.jpg')" shape="rect" coords="336, 48, 393, 110" ALT="Aula 83">
+<area href="javascript:popUp('/sites/default/files/planos/palta32.jpg')" shape="rect" coords="339, 152, 390, 200" ALT="Aula 82">
+<area href="javascript:popUp('/sites/default/files/planos/palta33.jpg')" shape="rect" coords="338, 210, 392, 254" ALT="Aula 81">
+<area href="javascript:popUp('/sites/default/files/planos/palta34.jpg')" shape="rect" coords="340, 265, 391, 329" ALT="Aula 80">
+<area href="javascript:popUp('/sites/default/files/planos/palta35.jpg')" shape="rect" coords="341, 339, 436, 426" ALT="Sal&oacute;n de Actos">
+<area href="javascript:popUp('/sites/default/files/planos/palta36.jpg')" shape="rect" coords="335, 439, 391, 466" ALT="Aula reducida 79">
+<area href="javascript:popUp('/sites/default/files/planos/palta37.jpg')" shape="rect" coords="340, 475, 390, 539" ALT="Aula 78">
+<area href="javascript:popUp('/sites/default/files/planos/palta38.jpg')" shape="rect" coords="341, 548, 390, 610" ALT="Aula 77">
+<area href="javascript:popUp('/sites/default/files/planos/palta39.jpg')" shape="rect" coords="341, 654, 387, 685" ALT="Aula reducida 76">
+<area href="javascript:popUp('/sites/default/files/planos/palta40.jpg')" shape="rect" coords="340, 691, 390, 756" ALT="Aula 75">
+<area href="javascript:popUp('/sites/default/files/planos/palta41.jpg')" shape="rect" coords="497, 622, 530, 671" ALT="Aula reducida 93">
+<area href="javascript:popUp('/sites/default/files/planos/palta42.jpg')" shape="rect" coords="571, 620, 638, 669" ALT="Aula 96">
+<area href="javascript:popUp('/sites/default/files/planos/palta43.jpg')" shape="rect" coords="497, 707, 563, 756" ALT="Aula 94">
+<area href="javascript:popUp('/sites/default/files/planos/palta44.jpg')" shape="rect" coords="570, 707, 634, 753" ALT="Aula 95">
+<area href="javascript:popUp('/sites/default/files/planos/palta45.jpg')" shape="rect" coords="68, 711, 83, 751" ALT="Dpto. Inform&aacute;tica">
+<area href="javascript:popUp('/sites/default/files/planos/palta46.jpg')" shape="rect" coords="8, 509, 58, 554" ALT="Sala Minerva">
+<area href="javascript:popUp('/sites/default/files/planos/palta47.jpg')" shape="rect" coords="156, 115, 197, 146" ALT="Aula reducida 66">
+<area href="javascript:popUp('/sites/default/files/planos/palta48.jpg')" shape="rect" coords="312, 712, 329, 753" ALT="Dpto. Interpretaci&oacute;n lengua signos">
+<area href="javascript:popUp('/sites/default/files/planos/palta49.jpg')" shape="circle" coords="95, 451, 7" ALT="Servidor Espejo">
+<area href="javascript:popUp('/sites/default/files/planos/palta50.jpg')" shape="circle" coords="95, 466, 7" ALT="Servidor Ares">
+<area href="javascript:popUp('/sites/default/files/planos/palta51.jpg')" shape="rect" coords="201, 115, 240, 146" ALT="Almacen">
+<area href="javascript:popUp('/sites/default/files/planos/palta52.jpg')" shape="rect" coords="253, 79, 304, 111" ALT="Cuarto limpiadoras">
+<area href="javascript:popUp('/sites/default/files/planos/palta53.jpg')" shape="rect" coords="91, 115, 145, 126" ALT="Archivo">
+<area href="javascript:popUp('/sites/default/files/planos/palta54.jpg')" shape="rect" coords="201, 618, 241, 646" ALT="Aula reducida 73">
+</map><img border="0" src="/sites/default/files/planos/palta.jpg" usemap="#PlantaAlta" width="644" height="761" ALT="Planta Alta">
+  </div>
+
+</article>

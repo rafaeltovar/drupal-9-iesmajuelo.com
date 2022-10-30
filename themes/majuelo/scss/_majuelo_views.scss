@@ -1,0 +1,38 @@
+.majuelo-content-list {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    // li,
+    article {
+        @extend .shadow-sm; 
+        @extend .p-3;
+        @extend .mb-5;
+        @extend .bg-body;
+        @extend .rounded;
+
+        footer {
+            @extend .text-secondary;
+            padding: 0 0;
+            margin-bottom: 20px;
+        }
+
+        .node__links {
+            display: none;
+        }
+    }
+}
+
+.views-element-container {
+
+    // .view-novedades,
+    // .view-bloque-avisos-direccion,
+    // .view-avisos-de-jefatura-de-estudio,
+    // .view-departamentos,
+    // .view-avisos-de-secretaria,
+    .view {
+        @extend .majuelo-content-list;
+    }
+}

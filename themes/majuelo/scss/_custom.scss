@@ -1,0 +1,241 @@
+.region-sidebar-second {
+    margin-top: 50px;
+}
+
+// album
+.node--type-photos {
+
+    // .contextual-region {
+    //     display: none;
+    // }
+
+    // .node__content {
+    //     .contextual-region:first {
+    //         display: none;
+    //     }
+    // }
+
+    .view-photos-album {
+        article {
+            margin: 3px;
+
+            .photos-list-view-title {
+                display: none;
+            }
+        }
+
+    }
+}
+
+// albums view
+.view-photos-album-list {
+    .album-fila {
+        text-align: center;
+        .views-field-cover-id {
+            margin: 5px;
+        }
+    }
+}
+
+// album individual item
+
+.page-node-type-photos {
+    .field--name-field-image {
+        text-align: center;
+        margin-top: 10px;
+        padding: 20px;
+        background-color: white;
+        @extend .shadow-sm;
+        @extend .rounded;
+        border: 1px solid $gray-100;
+    }
+
+}
+
+// img
+img {
+    &.img-thumbnail {
+        max-width: 350px;
+    }
+}
+
+// view actividades
+.fecha-actividad {
+    @extend .shadow-sm;
+    @extend .rounded;
+    float: right;
+    // width: 200px;
+    padding: 10px;
+    border: 1px solid $gray-300;
+    background-color: $gray-200;
+}
+
+.view-actividades {
+    .view-header {
+        margin-bottom: 20px;
+    }
+
+    .view-content {
+        article {
+            margin-bottom: 20px !important;
+        }
+
+        .field--name-field-fecha {
+            @extend .fecha-actividad;
+            width: 200px;
+        }
+    }
+}
+
+// node actividades
+.node--type-actividades {
+    .field--name-field-fecha {
+        @extend .fecha-actividad;
+        width: 200px;
+    }
+}
+
+// bloque de búsqueda
+form#search-block-form {
+    div {
+        &.form-type-search {
+            margin-right: 5px;
+        }
+    }
+}
+
+// twitter feed
+#block-twittertimeline {
+    margin-top: 20px;
+}
+
+// calendario escolar
+.node--type-calendario-escolar {
+    .calendar-container {
+        .row {
+            margin-bottom: 10px;
+        }
+
+        table {
+            &.majuelo-calendar {
+                -webkit-box-shadow: $box-shadow-sm;
+                -moz-box-shadow: $box-shadow-sm;
+                box-shadow: $box-shadow-sm;
+                width: 100%;
+                // background-color: $blue;
+                // border: 1px solid $blue;
+                border-collapse: collapse;
+                // margin-bottom: 10px;
+
+                td {
+                    border: 1px solid $blue;
+                }
+
+                thead {
+                    td {
+                        background-color: $blue;
+                        padding: 2px;
+                        text-align: center;
+                        color: white;
+                    }
+                }
+
+                tbody {
+                    a {
+                        text-decoration: underline;
+                    }
+
+                    tr {
+                        &.majuelo-calendar-days {
+                            font-size: 11px;
+                            text-align: center;
+
+                            td {
+                                background-color: #f0edff;
+                            }
+
+                        }
+
+                        td {
+                            background-color: $blue;
+                            text-align: center;
+                            
+                            span {
+                                margin: 1px 1px 1px 1px;
+                            }
+
+                            a {
+                                &:hover {
+                                    cursor: help;
+                                }
+                            }
+
+                            &.start, &.end {
+                                background-color: #f0edff;
+                                span {
+                                    height: 25px;
+                                    width: 25px;
+                                    background-color: #9191b6;
+                                    border-radius: 50%;
+                                    display: inline-block;
+                                }
+                                // background-color: #9191b6;
+                            }
+
+                            &.labour {
+                                background-color: #f0edff;
+                                &.today {
+                                    
+                                    span {
+                                        height: 25px;
+                                        width: 25px;
+                                        background-color: #00cccc;
+                                        border-radius: 50%;
+                                        display: inline-block;
+                                    }
+                                }
+                            } 
+
+                            &.weekend {
+                                background-color: #9a99d0;
+                                &.today {
+                                    background-color: #005252;
+                                    color: #f0edff;
+                                }
+                            }
+
+                            &.freeday {
+                                // &:hover {
+                                //     cursor: help;
+                                // }
+                                background-color: #cda715;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// tablet and mobile
+@include media-breakpoint-down(md) {
+    .view-actividades {
+        .view-content {  
+            .field--name-field-fecha {
+                @extend .fecha-actividad;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .node--type-actividades {
+        .field--name-field-fecha {
+            @extend .fecha-actividad;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -1,0 +1,5 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+      '//fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;700': { type: external, minified: true }

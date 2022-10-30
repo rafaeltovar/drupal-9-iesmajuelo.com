@@ -1,0 +1,54 @@
+// Sub theme styling.
+@import 'variables_drupal';
+
+// Bootstrap overriden variables.
+// @see https://getbootstrap.com/docs/5.1/customize/sass/#variable-defaults.
+@import 'variables_bootstrap';
+
+// Include bootstrap.
+@import '../../contrib/bootstrap5/scss/style';
+
+// Include custom views style
+
+@import 'majuelo_views';
+
+@import 'custom';
+
+@media (min-width: 992px) {
+    // .navbar-brand img {
+    //     height: 80px;
+    // }
+
+    main {
+        // margin-top: 0px;
+        margin-bottom: 100px;
+
+        .region-content {
+            margin-top: 50px;
+        }
+    }
+}
+
+header 
+{   
+    nav {
+        &.navbar {
+            border-bottom: 5px solid yellow;
+        }
+    }
+
+    #block-socialmedialinks {
+        a {
+            color: white;
+        }
+    }
+}
+
+
+.container {
+    max-width: 960px;
+}
+
+.display-4 {
+    font-weight: 400;
+}

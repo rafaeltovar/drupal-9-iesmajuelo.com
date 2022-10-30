@@ -1,0 +1,8 @@
+name: Majuelo Custom
+type: module
+description: 'Some custom functions for IES Majuelo web.'
+core_version_requirement: ^8.8 || ^9
+# Dependencies
+dependences:
+  - block
+  - config

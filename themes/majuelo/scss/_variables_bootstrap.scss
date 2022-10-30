@@ -1,0 +1,36 @@
+// Bootstrap variables (overrides).
+
+// override default bootstrap colors for accessibility
+//$white: #fff !default;
+//$black: #000 !default;
+//$gray-700: #495057 !default;
+
+$blue: #666699 !default;
+
+//$cyan: #006170 !default;
+//$pink: #e21181 !default;
+//$green: #008a00 !default;
+
+//$breadcrumb-divider-color: $gray-700 !default;
+//$breadcrumb-active-color: $gray-700 !default;
+
+//$navbar-light-color: rgba($black, .6) !default;
+//$navbar-dark-color: rgba($white, .6) !default;
+
+$form-text-margin-top: 0 !default;
+$legend-font-size: 1rem !default;
+$table-cell-padding-x: .75rem;
+
+$headings-font-family: 'Roboto Slab', serif;
+
+$display-font-sizes: (
+  1: 4rem,
+  2: 3.5rem,
+  3: 3rem,
+  4: 2.5rem,
+  5: 2rem,
+  6: 1.5rem
+);
+
+$headings-font-weight: 400;
+// $lead-font-weight: 400;
